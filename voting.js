@@ -1,19 +1,24 @@
 function redirect(party) {
-    // Store party name in localStorage
+    // Store party name in hidden input field (for form submission)
+    document.getElementById("selectedParty").value = party;
+
+    // Store party name in localStorage (optional)
     localStorage.setItem("selectedParty", party);
 
-    // Redirect to thank_you.html
+    // Submit form manually
+    document.querySelector("form").submit();
+
     window.location.href = "thank_you.html";
 }
 
 function redirect1() {
-    redirect("CONGRESS");
+    redirect("Unity Front Party (UFP)");
 }
 
 function redirect2() {
-    redirect("BJP");
+    redirect("Progressive People's Alliance (PPA)");
 }
 
 function redirect3() {
-    redirect("JDS");
+    redirect("Green Future Movement (GFM)");
 }
