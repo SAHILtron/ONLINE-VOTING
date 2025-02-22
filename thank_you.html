@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3e065f;
+        }
+        #timer {
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thank You for Voting!</h1>
+    <p class="message">You voted for: <span id="party"></span></p>
+    <h2>Redirecting to Home Page in <span id="timer">5</span> seconds...</h2>
+
+    <script>
+        // Retrieve the selected party from localStorage
+        const party = localStorage.getItem("selectedParty");
+
+        // Display the party name
+        document.getElementById("party").textContent = party ? party : "Unknown Party";
+
+        // Clear localStorage after displaying the message
+        localStorage.removeItem("selectedParty");
+
+        let timeLeft = 5;
+        let timerElement = document.getElementById("timer");
+
+        function updateTimer() {
+            timerElement.textContent = timeLeft;
+            timeLeft--;
+
+            if (timeLeft < 0) {
+                clearInterval(countdown); // Stop timer
+                window.location.href = "index.html"; // Redirect to home
+            }
+        }
+
+        // Start live countdown timer
+        let countdown = setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>

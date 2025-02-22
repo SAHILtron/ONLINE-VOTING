@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>One Main Div with Subdivs</title>
+        <link rel="stylesheet" href="voting.css">
+    </head>
+    <body>
+        <form action="/voter" method="POST">
+            <input type="hidden" name="selectedParty" id="selectedParty">
+        <h1 style="text-align: center;">VOTING  SYSTEM</h1>
+        <h2 style="text-align: center;"><marquee>CHOOSE YOUR PARTY</marquee></h2>
+        <div class="outer">
+            
+            <div class="main-div">
+                <div class="sub-div1">
+                    <label><b>Unity Front Party (UFP)</b></label>
+                </div>
+                <div class="div2-3">
+                    <div class="sub-div2">
+                        <img src="r-logo.webp" alt="LOGO">
+                    </div>
+                    <div class="sub-div3">
+                        <img src="rajeev.jpg" alt="PHOTO">
+                    </div>
+                </div>
+                <div class="sub-div4">
+                    <label>RAJEEV M M</label>
+                </div>
+                <div class="sub-div5">
+                    <button class="btn1" onclick="redirect1()" name="prt1">VOTE</button>
+                </div>
+            </div>
+
+            <div class="main-div">
+                <div class="sub-div1">
+                    <label><b>Progressive People's Alliance (PPA)</b></label>
+                </div>
+                <div class="div2-3">
+                    <div class="sub-div2">
+                        <img src="z-logo.webp" alt="LOGO" height="250px;">
+                    </div>
+                    <div class="sub-div3">
+                        <img src="zabi.jpg" alt="PHOTO">
+                    </div>
+                </div>
+                <div class="sub-div4">
+                    <label>ZABIULLA</label>
+                </div>
+                <div class="sub-div5">
+                    <button class="btn1" onclick="redirect2()" name="prt2">VOTE</button>
+                </div>
+            </div>
+
+            <div class="main-div">
+                <div class="sub-div1">
+                    <label><b>Green Future Movement (GFM)</b></label>
+                </div>
+                <div class="div2-3">
+                    <div class="sub-div2">
+                        <img src="s-logo.webp" alt="LOGO">
+                    </div>
+                    <div class="sub-div3">
+                        <img src="mani.jpg" alt="PHOTO">
+                    </div>
+                </div>
+                <div class="sub-div4">
+                    <label>SUBRAMANI B G</label>
+                </div>
+                <div class="sub-div5">
+                    <button class="btn1" onclick="redirect3()" name="prt3">VOTE</button>
+                </div>
+            </div>
+
+        </div>
+        </form>
+
+        <script src="voting.js"></script>
+    </body>
+    </html>
