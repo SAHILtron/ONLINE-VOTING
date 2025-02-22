@@ -1,45 +1,91 @@
-/* details.css */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #2a2438;
     font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust size */
+    font-weight: bold;
+    color: #dbd8e3; /* Dark purple */
+    text-transform: uppercase;
+    
+    margin-bottom: 10px;
 }
 
 .outer-div {
-    background: white;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #352f44;
     padding: 20px;
     border-radius: 10px;
+    border: 3px solid #000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
-    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 .inner-div {
     margin: 10px 0;
-    width: 95%;
+    width: 100%;
+    text-align: left;
 }
 
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #dbd8e3;
 }
 
 input {
-    width: 100%;
+    width: 95%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 3px solid #000;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
 
 input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-div {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #303030;
+    box-shadow: #fff;
 }

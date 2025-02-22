@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="details.css">
 </head>
 <body>
+    <h1>ENTER YOUR DETAILS FOR VERIFICATION</h1>
     <div class="outer-div">
-        <div class="inner-div">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="inner-div">
-            <label for="aadhar">Aadhar No:</label>
-            <input type="text" id="aadhar" name="aadhar">
-        </div>
-        <div class="inner-div">
-            <label for="voterid">Voter ID No:</label>
-            <input type="text" id="voterid" name="voterid">
-        </div>
+        <form action="submit" method="POST">
+            <div class="inner-div">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="inner-div">
+                <label for="aadhar">Aadhar No:</label>
+                <input type="text" id="aadhar" name="aadhar" required pattern="\d{12}" title="Enter a valid 12-digit Aadhar number">
+            </div>
+            <div class="inner-div">
+                <label for="voterid">Voter ID No:</label>
+                <input type="text" id="voterid" name="voterid" required>
+            </div>
+            <div class="button-div">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
