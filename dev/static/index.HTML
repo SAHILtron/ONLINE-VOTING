@@ -13,8 +13,6 @@
         <nav>
             <a href="#" onclick="showPage('home')">Home</a> 
             <a href="#" onclick="showPage('login')">Login</a>
-            <a href="#" onclick="showPage('details')">Details</a>
-            <a href="#" onclick="showPage('vote')">Vote</a>
             <a href="#" onclick="showPage('results')">Results</a>
         </nav>
     </header>
@@ -27,10 +25,10 @@
 
         <!-- Login Page -->
         <section id="login" class="page" style="display:none;">
-            <h2>Login</h2>
+            <h2 style="align-self: center;">Login</h2>
             <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="password" placeholder="Password" required>
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
                 <button type="submit">Login</button>
             </form>
         </section>
@@ -41,14 +39,14 @@
             <form id="detailsForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+                <p></p>
                 <label for="aadhar">Aadhar Number:</label>
-                <input type="text" id="aadhar" name="aadhar" maxlength="14" oninput="formatInput(this)">
+                <input type="text" id="aadhar" name="aadhar" required maxlength="14" oninput="formatInput(this)">
                 <p id="error-msg" style="color: red;"></p>
                 
                 <label for="voterid">Voter-ID Number:</label>
                 <input type="text" id="voterid" name="voterid" required maxlength="10">
-                
+                <p></p>
                 <button type="submit">Submit</button>
             </form>
         </section>
