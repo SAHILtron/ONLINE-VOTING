@@ -13,6 +13,7 @@
         <nav>
             <a href="#" onclick="showPage('home')">Home</a> 
             <a href="#" onclick="showPage('login')">Login</a>
+            <a href="#" onclick="showPage('register')">Register</a>
             <a href="#" onclick="showPage('results')">Results</a>
         </nav>
     </header>
@@ -25,37 +26,101 @@
 
         <!-- Login Page -->
         <section id="login" class="page" style="display:none;">
-            <h2 style="align-self: center;">Login</h2>
-            <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required><br>
-                <input type="password" id="password" placeholder="Password" required><br>
-                <button type="submit">Login</button>
-            </form>
+            <div class="outer-div">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="inner-div">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="inner-div">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="button-div">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="button-div">
+                        <button type="button" onclick="showPage('adminLogin')">Admin Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Admin Login Page -->
+        <section id="adminLogin" class="page" style="display:none;">
+            <div class="outer-div">
+                <h2>Admin Login</h2>
+                <form id="adminLoginForm">
+                    <div class="inner-div">
+                        <label for="adminUsername">Username:</label>
+                        <input type="text" id="adminUsername" placeholder="Admin Username" required>
+                    </div>
+                    <div class="inner-div">
+                        <label for="adminPassword">Password:</label>
+                        <input type="password" id="adminPassword" placeholder="Admin Password" required>
+                    </div>
+                    <div class="button-div">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Registration Page -->
+        <section id="register" class="page" style="display:none;">
+            <div class="outer-div">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="inner-div">
+                        <label for="regUsername">Username:</label>
+                        <input type="text" id="regUsername" placeholder="Username" required>
+                    </div>
+                    <div class="inner-div">
+                        <label for="regPassword">Password:</label>
+                        <input type="password" id="regPassword" placeholder="Password" required>
+                    </div>
+                    <div class="inner-div">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" placeholder="Email" required>
+                    </div>
+                    <div class="button-div">
+                        <button type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <!-- Details Page -->
         <section id="details" class="page" style="display:none;">
-            <h2>Enter Your Details</h2>
-            <form id="detailsForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <p></p>
-                <label for="aadhar">Aadhar Number:</label>
-                <input type="text" id="aadhar" name="aadhar" required maxlength="14" oninput="formatInput(this)">
-                <p id="error-msg" style="color: red;"></p>
-                
-                <label for="voterid">Voter-ID Number:</label>
-                <input type="text" id="voterid" name="voterid" required maxlength="10">
-                <p></p>
-                <button type="submit">Submit</button>
-            </form>
+            <div class="outer-div">
+                <h2>Enter Your Details</h2>
+                <form id="detailsForm">
+                    <div class="inner-div">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="inner-div">
+                        <label for="aadhar">Aadhar Number:</label>
+                        <input type="text" id="aadhar" name="aadhar" required maxlength="14" oninput="formatInput(this)">
+                        <p id="error-msg" style="color: red;"></p>
+                    </div>
+                    <div class="inner-div">
+                        <label for="voterid">Voter-ID Number:</label>
+                        <input type="text" id="voterid" name="voterid" required maxlength="10">
+                    </div>
+                    <div class="button-div">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <!-- Vote Page -->
         <section id="vote" class="page" style="display:none;">
             <form id="voteForm">
                 <input type="hidden" name="selectedParty" id="selectedParty">
-                <h1>CHOOSE YOUR PARTY</h1>
+                <h1><marquee> CHOOSE YOUR PARTY </marquee></h1>
                 <div class="outer">
                     <div class="main-div">
                         <div class="sub-div1">
@@ -176,6 +241,20 @@
             showPage("details");
         });
 
+        // Admin Login Form Submission
+        document.getElementById("adminLoginForm")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Admin login successful!");
+            showPage("results");
+        });
+
+        // Registration Form Submission
+        document.getElementById("registerForm")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Registration successful!");
+            showPage("login");
+        });
+
         // Details Form Submission
         document.getElementById("detailsForm")?.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -229,30 +308,6 @@
             }
 
             let countdown = setInterval(updateTimer, 1000);
-
-            createConfetti();
-        }
-
-        // Confetti Animation
-        function createConfetti() {
-            for (let i = 0; i < 100; i++) {
-                let confetti = document.createElement("div");
-                confetti.classList.add("confetti");
-                confetti.style.backgroundColor = getRandomColor();
-                confetti.style.left = Math.random() * 100 + "vw";
-                confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                confetti.style.width = Math.random() * 10 + 5 + "px";
-                confetti.style.height = confetti.style.width;
-                document.body.appendChild(confetti);
-
-                setTimeout(() => confetti.remove(), 5000); // Remove after animation
-            }
-        }
-
-        // Random Color Generator
-        function getRandomColor() {
-            const colors = ["#ff5733", "#ffbd33", "#33ff57", "#3357ff", "#ff33a8"];
-            return colors[Math.floor(Math.random() * colors.length)];
         }
     </script>
 </body>

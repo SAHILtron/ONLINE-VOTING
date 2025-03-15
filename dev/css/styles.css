@@ -8,6 +8,7 @@ body {
     background-color: #333536;
     font-family: Arial, sans-serif;
     flex-direction: column;
+    color: #000;
 }
 
 header {
@@ -66,6 +67,17 @@ footer {
 /* Page Styles */
 .page {
     display: none;
+}
+
+#home {
+    background-image: url('../img/home-bg.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -293,27 +305,6 @@ button:hover {
     font-weight: bold;
     color: red;
     margin: 0; /* Remove default margin */
-}
-
-/* Confetti Animation */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    opacity: 0.7;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    0% { transform: translateY(-10vh) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(720deg); }
-}
-
-/* Text Glow Animation */
-@keyframes glow {
-    from { text-shadow: 0 0 5px #ff7eb3, 0 0 10px #ff7eb3; }
-    to { text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493; }
 }
 
 /* Fade-in Animation */
