@@ -1,5 +1,9 @@
-![Screenshot 2025-03-15 105727](https://github.com/user-attachments/assets/119c83aa-92b3-4bd4-a5af-e336f629ff07)
 ![Screenshot 2025-03-15 093640](https://github.com/user-attachments/assets/5029df5d-303f-4f0f-9fc0-c1d9f812cb4f)
+![Screenshot 2025-03-17 113014](https://github.com/user-attachments/assets/4fbed9fa-4182-4698-acd2-d8a8e958b3fd)
+![Screenshot 2025-03-17 113037](https://github.com/user-attachments/assets/73ab694c-5dad-46f8-b0b1-677026271e3e)
+![Screenshot 2025-03-17 113118](https://github.com/user-attachments/assets/1046b29e-628c-48ef-9ee7-55b4491bc86b)
+![Screenshot 2025-03-15 105727](https://github.com/user-attachments/assets/119c83aa-92b3-4bd4-a5af-e336f629ff07)
+
 Online Voting System
 
 The Online Voting System is a web-based application designed to facilitate secure and efficient online voting. Users can log in, enter their details, cast their votes, and view the results in real-time. The system is built using HTML, CSS, and JavaScript for the frontend, with a focus on user-friendly design and accessibility.
