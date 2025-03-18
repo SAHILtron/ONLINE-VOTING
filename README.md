@@ -18,13 +18,21 @@ HTML5
 CSS3
 JavaScript
 
+PRODUCT MANAGER : JIRA TOOL , GITHUB .
+DEVELOPER : VS-CODE , HTMLHINT , ESLINT , STYLELINT , BROWSER , GITHUB.
+SECURITY : DAST TOOL ,SAST TOOL .
+TESTING : SELENIUM.
+DEPLOYMENT AND OPERATIONS : TERRAFORM , GITHUB HOSTING.
+DEVSECOPS : GITHUB ACTIONS.
+
+
 Version Control:
 Github desktop
 GitHub
 
 Follow these steps to set up and run the project locally.
 
-Prerequisites
+Requirements :
 A modern web browser (e.g., Chrome, Firefox, Edge)
 
 clone the repo
